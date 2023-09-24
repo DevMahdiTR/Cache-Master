@@ -5,16 +5,13 @@ Welcome to CacheMaster, the ultimate caching repository! 🚀 Handle LIFO, LRU, 
 
 Create Cache Instances
   FIFO Cache
-    To create a FIFO cache instance with a specific maximum size, use the following code:
-
+  
       Cache<Integer, String> cache = CacheFactory.getCache(Cache.Algorithm.FIFO);
   LIFO Cache
-    To create a LIFO cache instance with a specific maximum size, use the following code:
 
       Cache<Integer, String> cache = CacheFactory.getCache(Cache.Algorithm.LIFO);
   LRU Cache
-    To create a LRU cache instance with a specific maximum size, use the following code:
-
+  
       Cache<Integer, String> cache = CacheFactory.getCache(Cache.Algorithm.LRU);
 
 Example Usage
