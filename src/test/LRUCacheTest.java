@@ -9,10 +9,17 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-class LRUCacheTest {
+/**
+ * JUnit test class for LRUCache.
+ */
+public class LRUCacheTest {
 
+    /**
+     * Tests basic operations and eviction policy of LRUCache.
+     */
     @Test
-    void testLRUCache() {
+    public void testLRUCache() {
+        // Initialize LRUCache with a maximum size of 3
         Cache<String, Integer> lruCache = CacheFactory.getCache(Cache.Algorithm.LRU, 3);
 
         // Test put and get operations

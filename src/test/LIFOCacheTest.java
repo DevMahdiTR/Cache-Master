@@ -9,10 +9,17 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-class LIFOCacheTest {
+/**
+ * JUnit test class for LIFOCache.
+ */
+public class LIFOCacheTest {
 
+    /**
+     * Tests basic operations and eviction policy of LIFOCache.
+     */
     @Test
-    void testLIFOCache() {
+    public void testLIFOCache() {
+        // Initialize LIFOCache with a maximum size of 3
         Cache<String, Integer> lifoCache = CacheFactory.getCache(Cache.Algorithm.LIFO, 3);
 
         // Test put and get operations

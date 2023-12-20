@@ -9,10 +9,17 @@ import java.util.Optional;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-class FIFOCacheTest {
+/**
+ * JUnit test class for FIFOCache.
+ */
+public class FIFOCacheTest {
 
+    /**
+     * Tests basic operations and eviction policy of FIFOCache.
+     */
     @Test
-    void testFIFOCache() {
+    public void testFIFOCache() {
+        // Initialize FIFOCache with a maximum size of 3
         Cache<String, Integer> fifoCache = CacheFactory.getCache(Cache.Algorithm.FIFO, 3);
 
         // Test put and get operations
