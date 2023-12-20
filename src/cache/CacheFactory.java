@@ -1,3 +1,5 @@
+package cache;
+
 public final class CacheFactory {
 
     private static final int DEFAULT_MAX_SIZE = 500;

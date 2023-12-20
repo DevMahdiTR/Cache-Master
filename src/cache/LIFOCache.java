@@ -1,3 +1,11 @@
+package cache;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 class LIFOCache<K, V> implements Cache<K, V> {
     private final int maxSize;
     private final Map<K, V> cache;

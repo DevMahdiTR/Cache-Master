@@ -1,3 +1,12 @@
+package cache;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 class FIFOCache<K, V> implements Cache<K, V> {
     private final int maxSize;
     private final Map<K, V> cache;
