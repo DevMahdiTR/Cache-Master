@@ -17,14 +17,14 @@ public class FIFOCache<K, V> implements Cache<K, V> {
     @Override
     public void put(K key, V value) {
         if (cache.size() >= maxSize) {
-            K oldestKey = queue.poll(); // Remove the oldest key from the queue
+            K oldestKey = queue.poll(); 
             if (oldestKey != null) {
-                cache.remove(oldestKey); // Remove the corresponding entry from the cache
+                cache.remove(oldestKey);
             }
         }
 
         cache.put(key, value);
-        queue.offer(key); // Add the new key to the end of the queue
+        queue.offer(key);
     }
 
     @Override

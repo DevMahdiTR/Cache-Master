@@ -16,12 +16,12 @@ public class LIFOCache<K, V> implements Cache<K, V> {
     @Override
     public void put(K key, V value) {
         if (cache.size() >= maxSize) {
-            K lastKey = stack.pop(); // Remove the last (most recently added) key from the stack
-            cache.remove(lastKey); // Remove the corresponding entry from the cache
+            K lastKey = stack.pop(); 
+            cache.remove(lastKey); 
         }
 
         cache.put(key, value);
-        stack.push(key); // Add the new key to the top of the stack
+        stack.push(key); 
     }
 
     @Override
